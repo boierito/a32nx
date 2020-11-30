@@ -322,7 +322,6 @@
     - Green Dot speed (clean config or O)
     - is mach corrected
 
-
 - A32NX_VSPEEDS_LANDING_CONF3
     - Bool
     - True if FLAPS 3 is selected in perf page
@@ -436,7 +435,7 @@
 - A32NX_FIRE_BUTTON_APU
     - Bool
     - Indicates if the APU fire button is released
- 
+
  - A32NX_RMP_L_TOGGLE_SWITCH
     - Boolean
     - Whether the left radio management panel toggle switch is on or off.
@@ -468,3 +467,11 @@
 - A32NX_RMP_R_VHF3_STANDBY
     - Hz
     - The VHF 3 standby frequency for the right RMP.
+
+- A32NX_SIDESTICK_POSITION_X
+    - Number
+    - Provides the direct sidestick position (lateral)
+
+- A32NX_SIDESTICK_POSITION_Y
+    - Number
+    - Provides the direct sidestick position (longitudinal)
