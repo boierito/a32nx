@@ -2639,6 +2639,7 @@ class FMCMainDisplay extends BaseAirliners {
     Init() {
         super.Init();
         this.dataManager = new FMCDataManager(this);
+        this._flightGuidance = new NXFlightGuidance(this);
         this.tempCurve = new Avionics.Curve();
         this.tempCurve.interpolationFunction = Avionics.CurveTool.NumberInterpolation;
         this.tempCurve.add(-10 * 3.28084, 21.50);
@@ -2946,6 +2947,9 @@ class FMCMainDisplay extends BaseAirliners {
             SimVar.SetSimVarValue("L:AIRLINER_MANAGED_APPROACH_SPEED", "number", this.getManagedApproachSpeedMcdu());
         }
         this.updateRadioNavState();
+        if (this._flightGuidance) {
+            this._flightGuidance.update(_deltaTime);
+        }
     }
 
     onEvent(_event) {
